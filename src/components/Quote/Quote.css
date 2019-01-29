@@ -1,0 +1,11 @@
+.alq-quote__container {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.alq-quote__quote {
+    font-size: 30px;
+}
+
+.alq-quote__author {
+    font-size: 15px;
+}

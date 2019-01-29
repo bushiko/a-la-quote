@@ -1,0 +1,9 @@
+.alq-navbar__logo {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    transition: font-size 0.5s;
+}
+
+.alq-navbar__logo_small {
+    font-size: 20px;
+}
