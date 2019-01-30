@@ -1,13 +1,13 @@
 {
   "main.css": "/a-la-quote/static/css/main.5940f7f2.chunk.css",
-  "main.js": "/a-la-quote/static/js/main.0ccaa4bf.chunk.js",
-  "main.js.map": "/a-la-quote/static/js/main.0ccaa4bf.chunk.js.map",
+  "main.js": "/a-la-quote/static/js/main.c182d50d.chunk.js",
+  "main.js.map": "/a-la-quote/static/js/main.c182d50d.chunk.js.map",
   "static/js/1.4a586c1d.chunk.js": "/a-la-quote/static/js/1.4a586c1d.chunk.js",
   "static/js/1.4a586c1d.chunk.js.map": "/a-la-quote/static/js/1.4a586c1d.chunk.js.map",
   "runtime~main.js": "/a-la-quote/static/js/runtime~main.29042611.js",
   "runtime~main.js.map": "/a-la-quote/static/js/runtime~main.29042611.js.map",
   "static/css/main.5940f7f2.chunk.css.map": "/a-la-quote/static/css/main.5940f7f2.chunk.css.map",
   "index.html": "/a-la-quote/index.html",
-  "precache-manifest.efb26e02f604c84087d52eae8b99bba6.js": "/a-la-quote/precache-manifest.efb26e02f604c84087d52eae8b99bba6.js",
+  "precache-manifest.d06f6879081e31f8514c847ef7b87666.js": "/a-la-quote/precache-manifest.d06f6879081e31f8514c847ef7b87666.js",
   "service-worker.js": "/a-la-quote/service-worker.js"
 }
