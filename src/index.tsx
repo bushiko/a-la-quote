@@ -12,7 +12,7 @@ const App = () => {
             <section className="container" style={{marginTop: '100px'}}>
                 <div className="columns">
                     <div className="column is-three-fifths is-offset-one-fifth">
-                        <BrowserRouter>
+                        <BrowserRouter basename="/a-la-quote">
                             <React.Fragment>
                                 <Route path="/" exact component={QuoteList} />
                                 <Route path="/author/:author" component={QuoteList} />

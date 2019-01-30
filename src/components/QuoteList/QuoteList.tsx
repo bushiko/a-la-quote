@@ -50,8 +50,8 @@ class QuoteList extends React.Component<QuotesProps, QuoteListState> {
         console.log( props);
 
         this.axiosGQL = axios.create({
-            baseURL: 'http://localhost:8080/graphql'
-            // baseURL: 'https://alq-alq-graphql.7e14.starter-us-west-2.openshiftapps.com/graphql'
+            // baseURL: 'http://localhost:8080/graphql'
+            baseURL: 'https://alq-alq-graphql.7e14.starter-us-west-2.openshiftapps.com/graphql'
         });
     }
 
