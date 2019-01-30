@@ -1,13 +1,19 @@
 import React from 'react';
+import { match } from 'react-router';
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
 import Quote from '../Quote/Quote';
 import { Quote as QuoteModel } from '../../models/quote.model';
 
+export interface QuotesProps {
+    match?: match
+}
+  
 export interface QuoteListState {
     loading: boolean,
     noMore: boolean,
-    quotes: QuoteModel[]
+    quotes: QuoteModel[],
+    params: { [key: string]: any }
 }
 
 export interface GQLResult {
@@ -15,20 +21,37 @@ export interface GQLResult {
     total: number
 }
 
-class QuoteList extends React.Component<any, QuoteListState> {
+class QuoteList extends React.Component<QuotesProps, QuoteListState> {
     axiosGQL: AxiosInstance;
     pageSize = 3;
+    quoteQuery = `
+        query PaginatedQuotes($first: Int, $offset: Int, $author: String, $appearsIn: String, $source: Source) {
+            paginatedQuotes(first: $first, offset: $offset, author: $author, appearsIn: $appearsIn, source: $source) {
+            total
+            quotes {
+                appearsIn
+                author
+                content
+                image
+                source
+                }
+            }
+        }`;
 
     constructor(props: any) {
         super(props);
         this.state = {
             loading: false,
             noMore: false,
-            quotes: []
+            quotes: [],
+            params: props.match.params
         };
 
+        console.log( props);
+
         this.axiosGQL = axios.create({
-            baseURL: 'https://alq-alq-graphql.7e14.starter-us-west-2.openshiftapps.com/graphql'
+            baseURL: 'http://localhost:8080/graphql'
+            // baseURL: 'https://alq-alq-graphql.7e14.starter-us-west-2.openshiftapps.com/graphql'
         });
     }
 
@@ -46,7 +69,6 @@ class QuoteList extends React.Component<any, QuoteListState> {
             this.loadQuotes();
         }
     }
-
     
     loadQuotes() {
         const loading = this.state.loading,
@@ -57,7 +79,17 @@ class QuoteList extends React.Component<any, QuoteListState> {
         }
 
         this.setState({loading: true});
-        this.axiosGQL.post('', { query: this.getQuoteQuery() })
+        const body = {
+            query: this.quoteQuery,
+            variables: {
+                first: this.pageSize,
+                offset: this.state.quotes.length,
+                author: this.state.params.author,
+                source: this.state.params.source,
+                appearsIn: this.state.params.appearsIn
+            }
+        }
+        this.axiosGQL.post('', body)
         .then( (result: AxiosResponse) => {
             const axiosresult = result.data,
                 gqlResult: GQLResult = axiosresult.data.paginatedQuotes;
@@ -68,30 +100,12 @@ class QuoteList extends React.Component<any, QuoteListState> {
                     ...this.state.quotes,
                     ...gqlResult.quotes
                 ],
-                noMore: this.state.quotes.length >= gqlResult.total
+                noMore: (this.state.quotes.length + gqlResult.quotes.length) >= gqlResult.total
             });
 
         }, () => {
             this.setState({loading: false});
         });
-    }
-
-    getQuoteQuery() {
-        return `
-        {
-            paginatedQuotes(first: ${this.pageSize}, 
-                offset: ${this.state.quotes.length}
-            ) {
-            total
-            quotes {
-                appearsIn
-                author
-                content
-                image
-                source
-                }
-            }
-        }`;
     }
 
     render() {

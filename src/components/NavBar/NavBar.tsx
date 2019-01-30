@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './NavBar.css';
 
 export interface NavBarState {
@@ -38,7 +39,7 @@ class NavBar extends React.Component<any, NavBarState> {
             <nav className="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation"
                 style={{boxShadow: '1px 1px 6px #ababab'}}>
                 <div className="navbar-brand">
-                    <a className={`navbar-item alq-navbar__logo ${this.state.smallNav ? "alq-navbar__logo_small" : ""}`} href="#">
+                    <a className={`navbar-item alq-navbar__logo ${this.state.smallNav ? "alq-navbar__logo_small" : ""}`} href="/">
                         A-La Quote!
                     </a>
                 </div>

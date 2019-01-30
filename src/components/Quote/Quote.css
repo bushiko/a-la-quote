@@ -2,8 +2,9 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.alq-quote__quote {
+.alq-quote__content {
     font-size: 30px;
+    white-space: pre-wrap;
 }
 
 .alq-quote__author {
