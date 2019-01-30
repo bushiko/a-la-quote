@@ -1,13 +1,13 @@
 {
-  "main.css": "/a-la-quote/static/css/main.dbe92878.chunk.css",
-  "main.js": "/a-la-quote/static/js/main.1c88b0a7.chunk.js",
-  "main.js.map": "/a-la-quote/static/js/main.1c88b0a7.chunk.js.map",
-  "static/js/1.95604fd8.chunk.js": "/a-la-quote/static/js/1.95604fd8.chunk.js",
-  "static/js/1.95604fd8.chunk.js.map": "/a-la-quote/static/js/1.95604fd8.chunk.js.map",
+  "main.css": "/a-la-quote/static/css/main.5940f7f2.chunk.css",
+  "main.js": "/a-la-quote/static/js/main.d03bfb0e.chunk.js",
+  "main.js.map": "/a-la-quote/static/js/main.d03bfb0e.chunk.js.map",
+  "static/js/1.4a586c1d.chunk.js": "/a-la-quote/static/js/1.4a586c1d.chunk.js",
+  "static/js/1.4a586c1d.chunk.js.map": "/a-la-quote/static/js/1.4a586c1d.chunk.js.map",
   "runtime~main.js": "/a-la-quote/static/js/runtime~main.29042611.js",
   "runtime~main.js.map": "/a-la-quote/static/js/runtime~main.29042611.js.map",
-  "static/css/main.dbe92878.chunk.css.map": "/a-la-quote/static/css/main.dbe92878.chunk.css.map",
+  "static/css/main.5940f7f2.chunk.css.map": "/a-la-quote/static/css/main.5940f7f2.chunk.css.map",
   "index.html": "/a-la-quote/index.html",
-  "precache-manifest.965d3c7f57dc0d3ae16f2f55b3860c2f.js": "/a-la-quote/precache-manifest.965d3c7f57dc0d3ae16f2f55b3860c2f.js",
+  "precache-manifest.da42109753d9eeda5284cdfd4631a4df.js": "/a-la-quote/precache-manifest.da42109753d9eeda5284cdfd4631a4df.js",
   "service-worker.js": "/a-la-quote/service-worker.js"
 }
